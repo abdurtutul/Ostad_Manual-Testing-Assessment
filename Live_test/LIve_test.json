@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "584fb895-033b-47dd-b5ce-d3a70f324f8a",
+		"name": "LIve_test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22742638",
+		"_collection_link": "https://lunar-firefly-999126.postman.co/workspace/API-key~c5a74af9-79da-4c42-a7c3-e5d43fdad2dd/collection/22742638-584fb895-033b-47dd-b5ce-d3a70f324f8a?action=share&source=collection_link&creator=22742638"
+	},
+	"item": [
+		{
+			"name": "user_registration",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () \r",
+							"{\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"tutul1\",\r\n  \"password\": \"tutul44\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE URL}}/auth/register/",
+					"host": [
+						"{{BASE URL}}"
+					],
+					"path": [
+						"auth",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Blog Listing",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "tutul44",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "tutul1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "pm.test(\"Status code is 201\", function () {\r\n    pm.response.to.have.status(201);\r\n});\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "javascript"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE URL}}/blogs/",
+					"host": [
+						"{{BASE URL}}"
+					],
+					"path": [
+						"blogs",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Blog Creation",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "tutul44",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "tutul1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "pm.test(\"Status code is 201\", function () \r\n{\r\n    pm.response.to.have.status(201);\r\n});\r\n",
+					"options": {
+						"raw": {
+							"language": "javascript"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE URL}}/blogs/",
+					"host": [
+						"{{BASE URL}}"
+					],
+					"path": [
+						"blogs",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

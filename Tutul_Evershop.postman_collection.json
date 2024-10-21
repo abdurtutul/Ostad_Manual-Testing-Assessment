@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "f5509dc8-786a-4857-8968-ce2dc5cf2d58",
+		"name": "Tutul_Evershop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22742638",
+		"_collection_link": "https://lunar-firefly-999126.postman.co/workspace/API-key~c5a74af9-79da-4c42-a7c3-e5d43fdad2dd/collection/22742638-f5509dc8-786a-4857-8968-ce2dc5cf2d58?action=share&source=collection_link&creator=22742638"
+	},
+	"item": [
+		{
+			"name": "searching",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/search?keyword=Nike+react+phantom+run+flyknit+2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "Nike+react+phantom+run+flyknit+2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "select_product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/men/nike-react-phantom-run-flyknit-2-182",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"men",
+						"nike-react-phantom-run-flyknit-2-182"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cart",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/cart",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cart"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://demo.evershop.io/"
+		}
+	]
+}
